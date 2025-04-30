@@ -1,31 +1,91 @@
-import React from "react"
-import expense_tracker from "../assets/expense_tracker.jpg"
+import React from "react";
+import expense_tracker from "../assets/expense_tracker.jpg";
+import employee_management_system from "../assets/expense_tracker.jpg";
+import car_rent_system from "../assets/expense_tracker.jpg";
 
 const Projects = () => {
-    return (
-        <div>
+  const openLink = (url) => {
+    if (url) {
+      window.open(url, "_blank", "noopener,noreferrer");
+    } else {
+      console.warn("Attempted to open a null or undefinedd link");
+    }
+  };
 
-        <div>
-            <div>
-                <p>Projects</p>
-                <p>Check out some of my work right here</p>
-            </div>
+  const myProjects = [
+    {
+      id: 1,
+      src: expense_tracker,
+      demoLink: "https://expense-tracker-springboot-reactjs.netlify.app/",
+      codeLink:
+        "https://github.com/sahil0126/Expense_Tracker_Using_Spring_Boot_PostgreSQL_ReactJs",
+    },
+    {
+      id: 2,
+      src: employee_management_system,
+      demoLink:null,
+      codeLink: "https://github.com/sahil0126/Employee_Management_System",
+    },
+    {
+      id: 3,
+      src: car_rent_system,
+      demoLink:null,
+      codeLink: "https://github.com/sahil0126/Car_Rental_System_Using_Java",
+    },
+  ];
 
-            <div>
-                <div>
-                    <img src={expense_tracker} alt="" />
-                    <div>
-                        <button>Demo</button>
-                        <button>Code</button>
-                    </div>
-                </div>
-            </div>
+  return (
+    <div
+      name="projects"
+      className="bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-screen "
+    >
+      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full ">
+        <div className="pb-8">
+          <p className="text-4xl font-bold inline border-b-4 border-gray-500">
+            Projects
+          </p>
+          <p className="py-6">Check out some of my work right here</p>
         </div>
 
-   
-        
-        </div>
-    )
-}
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
+          {myProjects.map(({ id, src ,demoLink,codeLink}) => (
+            <div id={id} className="shadow-md shadow-gray-500 rounded-lg">
+              <img
+                src={src}
+                alt=""
+                className="rounded-md duration-200 hover:scale-105"
+              />
+              <div className="flex items-center justify-center">
 
-export default Projects
+
+                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105
+                disabled:opacity-50 
+                disabled:cursor-not-allowed
+                disabled:pointer-events-none "  
+                onClick={()=> openLink(demoLink)}
+                disabled={!demoLink}
+                >
+                  Demo
+                </button>
+
+
+
+                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105
+                 !codeLink ? 'opacity-50 cursor-not-allowed' : '' "
+                 onClick={()=> openLink(codeLink)}>
+                  Code
+                </button>
+
+
+
+
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Projects;
