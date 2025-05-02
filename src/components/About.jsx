@@ -12,19 +12,12 @@ const About = () => {
         </div>
         
         <p className="text-xl mt-20" >
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Reprehenderit doloremque consequuntur quaerat iste ratione est,
-          distinctio ea minima ipsam nesciunt quia necessitatibus sit sunt sed
-          in, placeat dolorem architecto laboriosam praesentium aut voluptatem?
-          Officiis, accusantium.
+        I'm a Java Developer with 10 months of internship experience and a strong foundation in backend development using Java, Spring Boot, Hibernate, and MySQL. I’ve also worked with frontend technologies like HTML, CSS, JavaScript, and ReactJS.
         </p>
         <br></br>
 
         <p className="text-xl" >
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae
-          doloremque odio alias eos voluptatum officia cum dolorem vitae
-          veritatis provident. Veniam, voluptate! Debitis architecto blanditiis
-          possimus in, repellat atque quasi.
+        I've built full-stack projects like an Expense Tracker App and an Employee Management System, and contributed to HTML5-based games as a frontend  dev intern. I'm passionate about learning, building useful software, and solving real-world problems.
         </p>
       </div>
     </div>

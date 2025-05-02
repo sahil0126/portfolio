@@ -39,7 +39,7 @@ const Skills = () => {
            id:5,
            src:java,
            title:"Java",
-           style:"shadow-orange-500" 
+           style:"shadow-orange-400" 
         },
         {
            id:6,
@@ -76,7 +76,7 @@ const Skills = () => {
        <div className='max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white'>
         
         <div>
-            <p className='text-4xl font-bold border-b-4 border-gray-500 p-2 inline' >Skills</p>
+            <p className='text-4xl font-bold border-b-4 border-gray-500 p-2 inline my-15 ' >Skills</p>
              
         </div>
         <div className='w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-14 px-12 sm:px-0' >

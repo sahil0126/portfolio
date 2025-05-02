@@ -1,7 +1,7 @@
 import React from "react";
 import expense_tracker from "../assets/expense_tracker.jpg";
 import employee_management_system from "../assets/expense_tracker.jpg";
-import car_rent_system from "../assets/expense_tracker.jpg";
+import car_rent_system from "../assets/car_rental_sys.png";
 
 const Projects = () => {
   const openLink = (url) => {
@@ -15,6 +15,7 @@ const Projects = () => {
   const myProjects = [
     {
       id: 1,
+      title:"Expense Tracker",
       src: expense_tracker,
       demoLink: "https://expense-tracker-springboot-reactjs.netlify.app/",
       codeLink:
@@ -22,12 +23,14 @@ const Projects = () => {
     },
     {
       id: 2,
+      title:"Employee Management System",
       src: employee_management_system,
       demoLink:null,
       codeLink: "https://github.com/sahil0126/Employee_Management_System",
     },
     {
       id: 3,
+      title:"Car Rental System using Java",
       src: car_rent_system,
       demoLink:null,
       codeLink: "https://github.com/sahil0126/Car_Rental_System_Using_Java",
@@ -48,14 +51,21 @@ const Projects = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-          {myProjects.map(({ id, src ,demoLink,codeLink}) => (
+          {myProjects.map(({ id,title ,src ,demoLink,codeLink}) => (
             <div id={id} className="shadow-md shadow-gray-500 rounded-lg">
               <img
                 src={src}
                 alt=""
                 className="rounded-md duration-200 hover:scale-105"
-              />
+                />
+
+                <div className="flex justify-center items-center sm:text-xs font-bold">
+                <h3 className="my-3 text-lg"  >{title}</h3>
+
+                </div>
+
               <div className="flex items-center justify-center">
+
 
 
                 <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105
